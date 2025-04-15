@@ -47,6 +47,8 @@ class InferenceClient:
         Raises:
             InferenceError: If inference fails after all retries
         """
+        if isinstance(input, str):
+            input = [input]
 
         for attempt in range(retries):
             try:
