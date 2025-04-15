@@ -9,7 +9,7 @@ from .anonymize import AnonymizeExtended
 # from .gibberish import Gibberish
 # from .invisible_text import InvisibleText
 # from .language import Language
-# from .prompt_injection import PromptInjection
+from .prompt_injection import PromptInjectionExtended
 # from .regex import Regex
 # from .secrets import Secrets
 # from .sentiment import Sentiment
@@ -28,7 +28,7 @@ __all__ = [
     # "Gibberish",
     # "InvisibleText",
     # "Language",
-    # "PromptInjection",
+    "PromptInjectionExtended",
     # "Regex",
     # "Secrets",
     # "Sentiment",
