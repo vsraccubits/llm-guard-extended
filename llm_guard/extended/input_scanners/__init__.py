@@ -1,6 +1,6 @@
 """Input scanners init"""
 
-# from .anonymize import Anonymize
+from .anonymize import AnonymizeExtended
 # from .ban_code import BanCode
 # from .ban_competitors import BanCompetitors
 # from .ban_substrings import BanSubstrings
@@ -19,7 +19,7 @@ from .toxicity import ToxicityExtended
 # from .util import get_scanner_by_name
 
 __all__ = [
-    # "Anonymize",
+    "AnonymizeExtended",
     # "BanCode",
     # "BanCompetitors",
     # "BanSubstrings",
