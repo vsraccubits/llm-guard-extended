@@ -96,10 +96,9 @@ class BudRemoteRecognizer(RemoteRecognizer):
             return results
 
         for result in response[0]:
-            result["entity_type"] = result["entity"]
-            result.pop("entity")
-            result.pop("index")
-            result.pop("word")
+            result["entity_type"] = result["entity_group"]
+            result.pop("word", None)
+            result.pop("entity_group", None)
 
             results.append(result)
 
