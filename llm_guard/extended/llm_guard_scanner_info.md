@@ -1,3 +1,6 @@
+## Environment
+INFERENCE_URL=http://172.184.137.177:8002/classify
+
 ## Input Scanners
 
 ### Anonymize
