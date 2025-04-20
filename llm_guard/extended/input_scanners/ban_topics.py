@@ -146,6 +146,20 @@ class BanTopicsExtended(Scanner):
         # output_model = self._classifier(prompt, self._topics, multi_label=False)
         output_model = InferenceClient(self._model.onnx_path).perform_inference(prompt)
         output_model = output_model[0]
+
+        # TODO: Remove dummy response when actual inference is available
+        output_model = {
+            "sequence": prompt,
+            "labels": ["voilence", "nudity", "self harm", "profanity", "sexual"],
+            "scores": [
+                0.6233283877372742,
+                0.16207753121852875,
+                0.07657799124717712,
+                0.07384064793586731,
+                0.06417541950941086,
+            ],
+        }
+
         LOGGER.warning(
             "Topics %s and Threshold %s unable to use in external inference",
             self._topics,
